@@ -1,4 +1,4 @@
-const apiURL = "https://localhost:7056/api/jobportal/getjob";
+const apiURL = "https://rahulsagarindian.bsite.net/api/jobportal/getjob";
 
 let jobs = [];
 let filteredJobs = [];
@@ -281,4 +281,5 @@ document.addEventListener("keydown", (e) => {
 });
 
 /* Init */
+
 fetchJobs();
