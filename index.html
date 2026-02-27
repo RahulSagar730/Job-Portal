@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Portal</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Job Portal</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Find Your Dream Job Today</h1>
+        <input type="text" id="searchInput" placeholder="Search by title, company, location..." />
+    </section>
+
+    <!-- Job Table Section -->
+    <section class="container">
+        <div id="loader" class="loader"></div>
+        <div id="error" class="error"></div>
+        <div class="table-wrapper">
+            <table id="jobTable">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Company</th>
+                        <th>Location</th>
+                        <th>Publish</th>
+                        <th>Posted</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </section>
+    <div class="custom-pagination">
+
+        <div class="page-go">
+            Go
+            <select id="pageSelect"></select>
+        </div>
+
+        <div class="rows-select">
+            Show Rows
+            <select id="rowsPerPage">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+            </select>
+        </div>
+
+        <div id="pageInfo" class="page-info"></div>
+
+        <div class="arrow-controls">
+            <button id="prevBtn">◀</button>
+            <button id="nextBtn">▶</button>
+        </div>
+
+    </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="jobModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p><strong>Company:</strong> <a href="" id="modalCompany"></a></p>
+            <p><strong>Location:</strong> <span id="modalLocation"></span></p>
+            <p><strong>Salary:</strong> <span id="modalSalary"></span></p>
+            <br/>
+            <p><strong>Job Description:</strong> <spen id="modalDescription"></spen></p>
+            <br/>
+            <div id="applyButtonsContainer"></div>
+            <!-- <button id="applyBtn" class="apply-btn">Apply Now</button> -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
