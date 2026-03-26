@@ -1,5 +1,5 @@
 // const apiBaseURL = "https://localhost:7056/api/jobportal/getjobs";//Local
-const apiBaseURL = "https://rahulsagarindian.bsite.net/api/jobportal/getjob";
+const apiBaseURL = "https://rahulsagarindian.bsite.net/api/jobportal/getjobs";
 
 let jobs = [];
 let currentPage = 1;
